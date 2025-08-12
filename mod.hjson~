@@ -8,7 +8,7 @@ name: "FunIndustry"
 author: "Xv,Rosegold"
 
 #the fully qualified main class of the mod
-main: "main.FunIndustry"
+main: "main.Main"
 
 #the mod description as seen in the mod dialog
 description: "A Mindustry Java mod."
