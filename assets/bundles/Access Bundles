@@ -1,0 +1,2 @@
+String text = Core.bundle.get("这是在Bundles里的key");
+String text = Core.bundle.format("这是在Bundles里的key","这是可变长度的额外的参数");

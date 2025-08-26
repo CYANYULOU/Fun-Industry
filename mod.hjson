@@ -2,22 +2,22 @@
 displayName: "Fun Industry"
 
 #the internal name of your mod
-name: "FunIndustry"
+name: "fun-industry"
 
 #your name
-author: "Xv,Rosegold"
+author: "XV"
 
 #the fully qualified main class of the mod
-main: "main.FunIndustry"
+main: "FunIndustry.FunIndustryMod"
 
 #the mod description as seen in the mod dialog
-description: "A Mindustry Java mod."
+description: "A Mindustry Java mod template.Just for Fun"
 
 #the mod version
 version: 1.0
 
 #the minimum game build required to run this mod
-minGameVersion: 146
+minGameVersion: 150
 
 #this is a java mod
 java: true
