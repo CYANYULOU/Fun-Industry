@@ -13,6 +13,7 @@ public class FunIndustryMod extends Mod {
     public void loadContent() {
         Log.info("Loading some FunIndustryMod content.");
         ModItems.load();
+        ModLiquid.load();
         ModBlocks.load();
     }
 }
