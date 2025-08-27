@@ -1,7 +1,6 @@
 
 package FunIndustry;
 
-import FunIndustry.blocks.StatedWall;
 import arc.graphics.Color;
 import mindustry.content.Fx;
 import mindustry.content.Items;
@@ -33,13 +32,13 @@ public class ModBlocks {
 */
 public class ModBlocks {
     //大型锌墙
-    public static StatedWall LargeZincWall;
+    public static Wall LargeZincWall;
     //锌墙
-    public static StatedWall ZincWall;
+    public static Wall ZincWall;
     //大型黄铜墙
-    public static StatedWall LargeBrassWall;
+    public static Wall LargeBrassWall;
     //黄铜墙
-    public static StatedWall BrassWall;
+    public static Wall BrassWall;
     //黄铜冶炼厂
     public static GenericCrafter brassSmelter;
     //黄铜导管
@@ -55,36 +54,32 @@ public class ModBlocks {
     public static Conveyor brassConveyor;
     public static void load() {
         //锌墙
-        ZincWall = new StatedWall("zinc-wall"){{
+        ZincWall = new Wall("zinc-wall"){{
            requirements(Category.defense,with(ModItems.zinc,6));
            health = 500;
            size = 1;
            buildCostMultiplier = 0.65f;
-            stateNumber = 2;
         }};
         //大型锌墙
-        LargeZincWall = new StatedWall("zinc-wall-large"){{
+        LargeZincWall = new Wall("zinc-wall-large"){{
             requirements(Category.defense,with(ModItems.zinc,24));
             health = 2000;
             size = 2;
             buildCostMultiplier = 2.6f;
-            stateNumber = 2;
         }};
         //黄铜墙
-        BrassWall = new StatedWall("brass-wall"){{
+        BrassWall = new Wall("brass-wall"){{
             requirements(Category.defense,with(ModItems.brass,6));
             health = 600;
             size = 1;
             buildCostMultiplier = 0.65f;
-            stateNumber = 2;
         }};
         //大型黄铜墙
-        LargeBrassWall = new StatedWall("brass-wall-large"){{
+        LargeBrassWall = new Wall("brass-wall-large"){{
             requirements(Category.defense,with(ModItems.brass,24));
             health = 2400;
             size = 2;
             buildCostMultiplier = 2.6f;
-            stateNumber = 2;
         }};
         //黄铜冶炼厂
         brassSmelter = new GenericCrafter("brass-smelter"){{
@@ -138,11 +133,29 @@ public class ModBlocks {
             ambientSoundVolume = 0.07f;
             outputLiquid = new LiquidStack(ModLiquid.Fuel, 12f / 60f);
             outputsLiquid = true;
+            liquidCapacity = 30f;
+            itemCapacity = 30;
 
             consumeLiquid(Liquids.oil, 12f / 60f);
             consumePower(0.50f);
         }};
+        /*
+        fractionatingtower = new GenericCrafter("fractionating-tower"){{
+            requirements(Category.crafting, with(ModItems.brass, 40, Items.graphite, 15, ModItems.zinc,30));
+            craftEffect = Fx.smeltsmoke;
+            outputItem = new ItemStack(ModItems.brass, 2);
+            craftTime = 40f;
+            size = 2;
+            hasPower = true;
+            hasLiquids = false;
+            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.valueOf("ffef99")));
+            ambientSound = Sounds.smelter;
+            ambientSoundVolume = 0.07f;
 
+            consumeItems(with(ModItems.zinc, 1, Items.copper, 2));
+            consumePower(0.50f);
+        }};
+        */
         //黄铜液体路由器
         brassliquidRouter = new LiquidRouter("brass-liquid-router"){{
             requirements(Category.liquid, with(ModItems.brass, 4, Items.metaglass, 2));
@@ -162,4 +175,3 @@ public class ModBlocks {
     }
 
 }
-

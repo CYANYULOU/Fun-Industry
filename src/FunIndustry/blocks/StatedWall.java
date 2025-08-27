@@ -8,8 +8,10 @@ import mindustry.world.blocks.defense.Wall;
 public class StatedWall extends Wall {
     public TextureRegion[] states;
     public int stateNumber;
+    public String stateName;
     public StatedWall(String name) {
         super(name);
+        this.load();
     }
     @Override
     public void load() {
@@ -17,14 +19,10 @@ public class StatedWall extends Wall {
         states = new TextureRegion[stateNumber];
         for (int i = 0; i < stateNumber; i++) {
             // name 是 Block 的注册名
-            states[i] = Core.atlas.find(name + "-" + i);
+            states[i] = Core.atlas.find( "Fun-industry-"+stateName+ "-" + i);
         }
+
     }
-
-
-
-
-
     public class StatedBuild extends WallBuild {
         @Override
         public void draw() {
