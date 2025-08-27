@@ -8,7 +8,7 @@ public class ModLiquid {
     public static Liquid Fuel;
     public static void load() {
         CarbonDioxide = new Liquid("carbon-dioxide", Color.valueOf("ffffff"));
-        Fuel = new Liquid("fuel", Color.valueOf("997B3E")) {
+        Fuel = new Liquid("fuel", Color.valueOf("F5E6C8")) {
             {
                 flammability = 2.0f;
                 explosiveness = 2.0f;
@@ -16,4 +16,3 @@ public class ModLiquid {
         };
     }
 }
-
