@@ -12,10 +12,18 @@ public class ModItems {
     public static Item brass;
     public static Item thulium;
     public static void load() {
-        zinc = new Item("zinc",Color.valueOf("A3A3A3"));
-        thulium = new Item("thulium",Color.valueOf("99D9EA"));
-        brass = new Item("brass",Color.valueOf("FFF200"));
-        bitumen = new Item("bitumen",Color.valueOf("0F0F0F"));
+        zinc = new Item("zinc",Color.valueOf("A3A3A3")){{
+            alwaysUnlocked = true;
+        }};
+        thulium = new Item("thulium",Color.valueOf("99D9EA")){{
+            alwaysUnlocked = true;
+        }};
+        brass = new Item("brass",Color.valueOf("FFF200")){{
+            alwaysUnlocked = true;
+        }};
+        bitumen = new Item("bitumen",Color.valueOf("0F0F0F")){{
+            alwaysUnlocked = true;
+        }};
     }
 
 }

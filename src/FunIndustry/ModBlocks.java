@@ -59,6 +59,7 @@ public class ModBlocks {
            health = 500;
            size = 1;
            buildCostMultiplier = 0.65f;
+           alwaysUnlocked = true;
         }};
         //大型锌墙
         LargeZincWall = new Wall("zinc-wall-large"){{
@@ -66,6 +67,7 @@ public class ModBlocks {
             health = 2000;
             size = 2;
             buildCostMultiplier = 2.6f;
+            alwaysUnlocked = true;
         }};
         //黄铜墙
         BrassWall = new Wall("brass-wall"){{
@@ -73,6 +75,7 @@ public class ModBlocks {
             health = 600;
             size = 1;
             buildCostMultiplier = 0.65f;
+            alwaysUnlocked = true;
         }};
         //大型黄铜墙
         LargeBrassWall = new Wall("brass-wall-large"){{
@@ -80,6 +83,7 @@ public class ModBlocks {
             health = 2400;
             size = 2;
             buildCostMultiplier = 2.6f;
+            alwaysUnlocked = true;
         }};
         //黄铜冶炼厂
         brassSmelter = new GenericCrafter("brass-smelter"){{
@@ -96,6 +100,8 @@ public class ModBlocks {
 
             consumeItems(with(ModItems.zinc, 1, Items.copper, 2));
             consumePower(0.50f);
+
+            alwaysUnlocked = true;
         }};
         //黄铜导管
         brassConduit = new Conduit("brass-conduit"){{
@@ -104,6 +110,8 @@ public class ModBlocks {
             liquidPressure = 1.025f;
             health = 150;
             explosivenessScale = flammabilityScale = 16f/40f;
+
+            alwaysUnlocked = true;
         }};
         //黄铜导管阀
         /*
@@ -138,6 +146,8 @@ public class ModBlocks {
 
             consumeLiquid(Liquids.oil, 12f / 60f);
             consumePower(0.50f);
+
+            alwaysUnlocked = true;
         }};
         /*
         fractionatingtower = new GenericCrafter("fractionating-tower"){{
@@ -164,6 +174,8 @@ public class ModBlocks {
             solid = false;
             health = 100;
             explosivenessScale = flammabilityScale = 20f/120f;
+
+            alwaysUnlocked = true;
         }};
         //黄铜传送带
         brassConveyor = new Conveyor("brass-conveyor"){{
@@ -171,6 +183,8 @@ public class ModBlocks {
             health = 200;
             speed = 0.16f;
             displayedSpeed = 20f;
+
+            alwaysUnlocked = true;
         }};
     }
 
