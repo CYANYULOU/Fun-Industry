@@ -142,23 +142,7 @@ public class ModBlocks {
             consumeLiquid(Liquids.oil, 12f / 60f);
             consumePower(0.50f);
         }};
-        /*
-        fractionatingtower = new GenericCrafter("fractionating-tower"){{
-            requirements(Category.crafting, with(ModItems.brass, 40, Items.graphite, 15, ModItems.zinc,30));
-            craftEffect = Fx.smeltsmoke;
-            outputItem = new ItemStack(ModItems.brass, 2);
-            craftTime = 40f;
-            size = 2;
-            hasPower = true;
-            hasLiquids = false;
-            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.valueOf("ffef99")));
-            ambientSound = Sounds.smelter;
-            ambientSoundVolume = 0.07f;
 
-            consumeItems(with(ModItems.zinc, 1, Items.copper, 2));
-            consumePower(0.50f);
-        }};
-        */
         //黄铜液体路由器
         brassliquidRouter = new LiquidRouter("brass-liquid-router"){{
             requirements(Category.liquid, with(ModItems.brass, 4, Items.metaglass, 2));
@@ -178,3 +162,4 @@ public class ModBlocks {
     }
 
 }
+
